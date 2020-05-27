@@ -1,0 +1,17 @@
+algoritmo "AptidaoCarteira"
+var
+R, ano, nasc: inteiro
+inicio
+   escrevaL("Em que ano estamos? ")
+   leia(ano)
+   escrevaL("Em que ano você nasceu? ")
+   leia(nasc)
+   R <- (ano-nasc)
+   Se(R >= 18) entao
+        Escreva("Você tem", R, " anos e está apto(a) a tirar a carteira de motorista")
+   Senao
+      Se(R < 18) entao
+         Escreva("Você tem", R, " anos e está inapto(a) a tirar a carteira de motorista")
+      FimSe
+   FimSe
+fimalgoritmo
