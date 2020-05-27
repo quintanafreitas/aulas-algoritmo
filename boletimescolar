@@ -1,0 +1,35 @@
+algoritmo "GeradorDeBoletim"
+var
+   nome, classe: caractere
+   M, n1, n2, n3: real
+inicio
+   escreva("Digite o nome do aluno: ")
+   leia(nome)
+   escreva("Digite a série do aluno e o segmento: ")
+   leia(classe)
+   escreva("Nota - 1º período: ")
+   leia(n1)
+   escreva("Nota - 2º período: ")
+   leia(n2)
+   escreva("Nota - 3º período: ")
+   leia(n3)
+   M <- (n1 + n2 + n3)/3
+   se (M >= 6) entao
+      escrevaL("Nome: ", nome)
+      escrevaL("Série e segmento: ", classe)
+      escrevaL("Média: ", M:5:1)
+      escreva("Aprovado")
+   senao
+      se (M < 6) e (M >= 4) entao
+         escrevaL("Nome: ", nome)
+         escrevaL("Série e segmento: ", classe)
+         escrevaL("Média: ", M:5:1)
+         escreva("Recuperação final")
+      senao
+         escrevaL("Nome: ", nome)
+         escrevaL("Série e segmento: ", classe)
+         escrevaL("Média: ", M:5:1)
+         escreva("Reprovado")
+      fimse
+   fimse
+fimalgoritmo
