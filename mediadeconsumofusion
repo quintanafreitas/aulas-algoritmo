@@ -1,8 +1,7 @@
-algoritmo "MédiaDeConsumoFusion"
+algoritmo "CálculoDeDívida"
 var
-   km0, km, kmrod: inteiro
-   gas: real
-
+   km0, km, kmrod, D: inteiro
+   gas, eta: real
 inicio
    escrevaL("-----------------------------------------")
    escrevaL("MÉDIA DE CONSUMO - FORD FUSION 2.0 HYBRID")
@@ -10,13 +9,36 @@ inicio
    escrevaL(" ")
    escrevaL("Bom dia/tarde/noite")
    escrevaL(" ")
-   escreva("Digite a km inicial: ")
-   leia(km0)
-   escreva("Digite a km final: ")
-   leia(km)
-   kmrod <- km-km0
-   gas <- kmrod/16.6
-   escrevaL("Você consumiu ", gas:5:2, " litros de gasolina comum")
+   escrevaL("Escolha o combustível")
+   escrevaL("[1] Gasolina comum")
+   escrevaL("[2] Etanol")
    escrevaL(" ")
-   escreva("Obrigado pela utilização")
-fimalgoritmo
+   escreva("Código do combustível: ")
+   leia(D)
+   escolha(D)
+      Caso 1
+         escrevaL(" ")
+         escreva("Digite a km inicial: ")
+         leia(km0)
+         escreva("Digite a km final: ")
+         leia(km)
+         kmrod <- km-km0
+         gas <- kmrod/16.6
+         escrevaL(" ")
+         escrevaL("Você consumiu", gas:5:2, " litros de gasolina comum")
+         escrevaL(" ")
+         escreva("Obrigado pela utilização")
+      Caso 2
+         escrevaL(" ")
+         escreva("Digite a km inicial: ")
+         leia(km0)
+         escreva("Digite a km final: ")
+         leia(km)
+         kmrod <- km-km0
+         eta <- kmrod/15.1
+         escrevaL(" ")
+         escrevaL("Você consumiu", eta:5:2, " litros de etanol")
+         escrevaL(" ")
+         escreva("Obrigado pela utilização")
+   fimescolha
+   fimalgoritmo
